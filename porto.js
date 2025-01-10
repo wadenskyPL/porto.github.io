@@ -2,6 +2,6 @@
 
 <script>
 function redirectToPage() {
-  window.location.href = "page_destination.html";
+  window.location.href = "/";
 }
 </script>
