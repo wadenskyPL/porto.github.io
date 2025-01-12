@@ -167,8 +167,7 @@ color: skyblue ;
 }
 
 .boutton {
-    position: relative; /* Permet de positionner le tooltip par rapport au bouton */
-    padding: 10px 20px;
+    position: relative; 
     border: 2px solid #3498db;
     background-color: #fff;
     color: #3498db;
