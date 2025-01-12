@@ -199,5 +199,5 @@ color: skyblue ;
 .boutton:hover::after {
     visibility: visible;
     opacity: 1;
-    top: 110%; /* Ajoute un petit espace entre le bouton et le tooltip */
+    top: 110%;
 }
