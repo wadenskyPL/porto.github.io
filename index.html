@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mon Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <script src="proto.js"></script>
-
 </head>
 <body>
     <!-- En-tête -->
@@ -31,25 +29,25 @@
                 <button class="boutton">Voir mes projets</button>
             </div>
             <div class="image-container">
-   <img src="web.png" alt="image illustrant le code d'une app web ">
+                 <img src="photo/web.png" alt="image illustrant  le codage d'un app web "> 
             </div>
         </div>
     </section>
 
     <!-- Section À propos -->
     <section id="apropos" class="a pro">
-        <h2 class"nom">À propos de moi</h2>
+        <h2 id="abc">À propos de moi</h2>
         <div class="box">
             <div>
                 <p>
                     Passionné de technologie, je suis constamment à la recherche de nouvelles connaissances dans les domaines de la 
                     <b class="nom">programmation</b>, du <b class="nom">marketing digital</b>, et des <b class="nom">réseaux informatiques</b>. 
-                    Mon objectif est de mettre à profit mes compétences pour contribuer au développement de ma <b class="nom">communauté</b>.
+                    Mon objectif est de mettre à profit mes compétences pour contribuer au développement de ma <b class="nom">communauté .</b>
                 </p>
-                <a class="boutton" href="https://www.linkedin.com/in/wpl4699?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"  target="blank"> Linkdin</a>
+                <a class="boutton" href="https://www.linkedin.com/in/wpl4699?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"  target="blank">linkedin</a>
             </div>
             <div class="image-container">
-                <img src="wade.png" alt="Votre image">
+                <img src="photo/wade.png" alt="mon image">
             </div>
         </div>
     </section>
@@ -66,7 +64,7 @@ Mise en place d'une image de marque forte et mémorable
 Amélioration de la cohérence visuelle de toutes les communications
 Conception de contenu pour la page web "DécouvreTH":
 Création de contenus engageants et informatifs
-Optimisation du référencement naturel <b class="nom" >(SEO)</b> de la page
+Optimisation du référencement naturel <b class="abc "> (SEO)</b> de la page
 Mise à jour régulière du contenu</p>
 
             <button class="boutton">Voir les détails</button>
@@ -115,24 +113,47 @@ Mise à jour régulière du contenu</p>
         </div>
     </section>
 <section id="" class="contact">
-<h2 id="abc"> Contact </h2>
     <form method="post" action="https://script.google.com/macros/s/AKfycbwLPUea3dIPmHGXAktQTVyNKboOv8cRDVEVBUjrBwD2dLh3AhbwntJkBiELdtT2cFlY/exec">
     <label for="name">Nom complet:</label>
-    <input type="text" id="name" name="name" required>
+    <input type="text" id="name" name="name" >
     
     <label for="subject">Sujet:</label>
-    <input type="text" id="subject" name="subject" required>
+    <input type="text" id="subject" name="subject" >
     
     <label for="message">Message:</label>
-    <textarea id="message" name="message" rows="4" required></textarea>
+    <textarea id="message" name="message" rows="4" ></textarea>
     
     <button type="submit">Envoyer</button>
 </form>
+<script>
+    function validateForm(event) {
+        // Récupérer les valeurs des champs
+        const name = document.getElementById('name').value;
+        const subject = document.getElementById('subject').value;
+        const message = document.getElementById('message').value;
+        if (!name || !subject || !message) {
+            // Afficher un message d'alerte si un champ est vide
+            alert('Tous les champs doivent être remplis.');
+            event.preventDefault(); // Empêcher l'envoi du formulaire
+            return false;
+        }
+        return true;
+    }
+    document.addEventListener('DOMContentLoaded', function () {
+        const form = document.querySelector('form');
+        if (form) {
+            form.addEventListener('submit', function (event) {
+                validateForm(event);
+            });
+        }
+    });
+</script>
 
 </section>
     <!-- Pied de page -->
     <footer>
         <p>© 2025 Wadensky Pierre-Louis</p>
     </footer>
+
 </body>
 </html>
